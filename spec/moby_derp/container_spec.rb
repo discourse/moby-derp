@@ -669,7 +669,7 @@ describe MobyDerp::Container do
 							expect(create_options["name"]).to eq("spec-pod")
 							expect(create_options["HostConfig"]["Init"]).to eq(true)
 							expect(create_options["HostConfig"]["NetworkMode"]).to eq("bridge")
-							expect(create_options["HostConfig"]).to_not have_key("IpcMode")
+							expect(create_options["HostConfig"]["IpcMode"]).to eq("shareable")
 							expect(create_options["HostConfig"]).to_not have_key("PidMode")
 							expect(create_options["Labels"]).to_not have_key("org.hezmatt.moby-derp.root-container-id")
 							expect(create_options["MacAddress"]).to match(/\A02(:[0-9a-f]{2}){5}\z/)
