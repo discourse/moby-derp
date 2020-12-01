@@ -120,6 +120,7 @@ describe MobyDerp::Pod do
 		context "when the root container exists and is up-to-date" do
 			before(:each) do
 				allow(Docker::Container).to receive(:get).with("mullet").and_return(mock_docker_container)
+				allow(mock_docker_container).to receive(:start)
 				allow(mock_docker_container).to receive(:id).and_return("mockmockmockid")
 				allow(mock_docker_container)
 					.to receive(:info)

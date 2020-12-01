@@ -105,6 +105,7 @@ module MobyDerp
 				labels:         @config.root_labels,
 				readonly:       true,
 				restart:        "always",
+				update_image:   false,
 			)
 		end
 	end
