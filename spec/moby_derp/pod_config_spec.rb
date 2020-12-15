@@ -17,6 +17,9 @@ describe MobyDerp::PodConfig do
 				"two" => {
 					"image" => "foo/two:latest",
 				},
+				"three" => {
+					"image" => "foo/three@hash:beeeeeeeeeeeeeeeeeeeeeeeeeeeeeef",
+				},
 			},
 			"hostname" => "custom-hostname",
 			"common_environment" => {

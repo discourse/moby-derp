@@ -62,7 +62,7 @@ module MobyDerp
 				      "image is not a valid image reference"
 			end
 
-			if @image.match(Docker::Image::IMAGE_REFERENCE)[9].nil?
+			if @image.match(Docker::Image::IMAGE_REFERENCE)[9..10].all? { |i| i.nil? }
 				@image += ":latest"
 			end
 		end
