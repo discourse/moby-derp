@@ -7,9 +7,15 @@ Gem::Specification.new do |s|
 
 	s.summary  = "A simple management system for a pod of moby containers"
 
-	s.authors  = ["Matt Palmer"]
-	s.email    = ["theshed+moby-derp@hezmatt.org"]
-	s.homepage = "http://github.com/mpalmer/moby-derp"
+	s.authors  = [
+		"Matt Palmer",
+		"Daniel Waterworth",
+		"Sam Saffron",
+		"Andrew Schleifer",
+		"Michael Brown",
+	]
+	s.email    = ["team@discourse.org"]
+	s.homepage = "http://github.com/discourse/moby-derp"
 
 	s.files = `git ls-files -z`.split("\0").reject { |f| f =~ /^(G|spec|Rakefile)/ }
 	s.executables = ["moby-derp"]
