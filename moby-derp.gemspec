@@ -1,7 +1,7 @@
 Gem::Specification.new do |gemspec|
 	gemspec.name    = "moby-derp"
 	gemspec.summary = "A simple management system for a pod of moby containers"
-	gemspec.version = "0.7.2"
+	gemspec.version = "0.7.3"
 
 	gemspec.authors  = [
 		"Matt Palmer",
