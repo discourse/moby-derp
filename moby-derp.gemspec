@@ -1,36 +1,33 @@
-Gem::Specification.new do |s|
-	s.name = "moby-derp"
+Gem::Specification.new do |gemspec|
+	gemspec.name    = "moby-derp"
+	gemspec.summary = "A simple management system for a pod of moby containers"
+	gemspec.version = "0.7.2"
 
-	s.version = "0.7.2"
-
-	s.platform = Gem::Platform::RUBY
-
-	s.summary  = "A simple management system for a pod of moby containers"
-
-	s.authors  = [
+	gemspec.authors  = [
 		"Matt Palmer",
 		"Daniel Waterworth",
 		"Sam Saffron",
 		"Andrew Schleifer",
 		"Michael Brown",
 	]
-	s.email    = ["team@discourse.org"]
-	s.homepage = "http://github.com/discourse/moby-derp"
+	gemspec.email    = ["team@discourse.org"]
+	gemspec.homepage = "http://github.com/discourse/moby-derp"
 
-	s.files = `git ls-files -z`.split("\0").reject { |f| f =~ /^(G|spec|Rakefile)/ }
-	s.executables = ["moby-derp"]
+	gemspec.files       = `git ls-files -z`.split("\0").reject { |f| f =~ /^(G|spec|Rakefile)/ }
+	gemspec.executables = ["moby-derp"]
 
-	s.required_ruby_version = ">= 2.3.0"
+	gemspec.required_ruby_version = ">= 2.3.0"
+	gemspec.platform              = Gem::Platform::RUBY
 
-	s.add_runtime_dependency "docker-api"
-	s.add_runtime_dependency "json-canonicalization"
+	gemspec.add_runtime_dependency "docker-api"
+	gemspec.add_runtime_dependency "json-canonicalization"
 
-	s.add_development_dependency 'bundler'
-	s.add_development_dependency 'deep_merge'
-	s.add_development_dependency 'guard-rspec'
-	s.add_development_dependency 'rake', '~> 12'
-	s.add_development_dependency 'redcarpet'
-	s.add_development_dependency 'rspec'
-	s.add_development_dependency 'simplecov'
-	s.add_development_dependency 'yard'
+	gemspec.add_development_dependency 'bundler'
+	gemspec.add_development_dependency 'deep_merge'
+	gemspec.add_development_dependency 'guard-rspec'
+	gemspec.add_development_dependency 'rake', '~> 12'
+	gemspec.add_development_dependency 'redcarpet'
+	gemspec.add_development_dependency 'rspec'
+	gemspec.add_development_dependency 'simplecov'
+	gemspec.add_development_dependency 'yard'
 end
